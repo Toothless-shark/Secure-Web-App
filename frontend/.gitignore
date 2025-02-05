@@ -5,7 +5,10 @@
 /.pnp
 .pnp.js
 
-#public
+# readme
+/README.md
+
+# public
 /public
 
 # testing
