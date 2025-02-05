@@ -1,0 +1,75 @@
+/* Style de la page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Dégradé de fond */
+    font-family: 'Roboto', sans-serif; /* Police moderne */
+    padding: 20px; /* Ajout d'un peu de marge autour du conteneur */
+}
+
+.login-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box; /* Assure-toi que le padding est inclus dans la largeur totale */
+    margin-top: 50px;  /* Ajoute un espace entre le formulaire et le haut de la page */
+}
+
+.login-form h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 0 0 0px #00ff0000;
+}
+
+.login-form label {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Assure-toi que le padding ne dépasse pas la largeur */
+}
+
+.login-form input:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #6a11cb;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0;
+}
+
+.logo {
+    width: 50px;
+    margin-bottom: 20px;
+}

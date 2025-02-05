@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  background-color: #0a0a0a; /* Dark background */
+  color: #00ff00; /* Neon green text */
+  overflow: hidden;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle Gradient Background */
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #0a0a0a, #001a00, #0a0a0a, #001a00); /* Dark green gradient */
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: 1;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Content */
+.home-content {
+  background: rgba(17, 17, 17, 0.9); /* Semi-transparent dark background */
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid #00ff00; /* Neon green border */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); /* Subtle neon glow */
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  z-index: 2; /* Ensure content is above the background */
+}
+
+h1 {
+  color: #00ff00; /* Neon green */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #00ff00; /* Subtle glow effect */
+}
+
+p {
+  color: #00ff00; /* Neon green */
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.home-buttons button {
+  background: #00ff00; /* Neon green */
+  color: #0a0a0a; /* Dark text */
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-buttons button:hover {
+  background: #00cc00; /* Darker green on hover */
+  box-shadow: 0 0 10px #00ff00; /* Glow effect on hover */
+}
+
+/* Falling Binary Code */
+.binary-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.binary-background span {
+  position: absolute;
+  color: #00ff00;
+  font-size: 1.2em;
+  opacity: 0.3;
+  animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}

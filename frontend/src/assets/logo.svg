@@ -1,0 +1,26 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  width="150"
+  height="150"
+  style="background-color: #0a0a0a;"
+>
+  <!-- Shield -->
+  <path
+    d="M100 20L20 50V90C20 130 60 160 100 180C140 160 180 130 180 90V50L100 20Z"
+    fill="none"
+    stroke="#00ff00"
+    stroke-width="10"
+  />
+
+  <!-- Lock -->
+  <path
+    d="M120 90H80V70C80 55 90 40 100 40C110 40 120 55 120 70V90Z"
+    fill="#00ff00"
+  />
+  <rect x="90" y="90" width="20" height="30" fill="#00ff00" />
+  <!-- Binary Code -->
+  <text x="65" y="140" fill="#00ff00" font-family="Courier New" font-size="20">
+    101010
+  </text>
+</svg>

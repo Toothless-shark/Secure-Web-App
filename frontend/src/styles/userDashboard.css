@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  background-color: #0a0a0a; /* Dark background */
+  color: #00ff00; /* Neon green text */
+  overflow: hidden;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient Background Animation */
+.dashboard-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #0a0a0a, #001a00, #0a0a0a, #001a00);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: 1;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Dashboard Card */
+.dashboard-card {
+  background: rgba(17, 17, 17, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #00ff00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  z-index: 2;
+}
+
+.dashboard-card h2 {
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+/* Menu */
+.menu {
+  margin-top: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  cursor: pointer;
+  padding: 12px;
+  margin: 5px;
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu li:hover {
+  background-color: #00cc00;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* User List */
+.user-list {
+  background: rgba(17, 17, 17, 0.95); /* Fond sombre semi-transparent */
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #00ff00; /* Bordure néon verte */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Effet néon */
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  z-index: 100;
+  position: relative;
+  margin: 20px auto;
+}
+
+.user-list h3 {
+  color: #00ff00; /* Texte néon vert */
+  text-shadow: 0 0 5px #00ff00;
+  margin-bottom: 10px;
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* User Info */
+.user-info {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(0, 255, 0, 0.1); /* Légèrement transparent */
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  color: #00ff00;
+}
+
+.user-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-info li {
+  padding: 8px;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-list li {
+  background-color: #111; /* Fond sombre */
+  border: 1px solid #00ff00; /* Bordure verte */
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: #00ff00;
+  text-shadow: 0 0 3px #00ff00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Boutons ajustés (style menu li, taille plus petite) */
+.small-button {
+  cursor: pointer;
+  padding: 8px; /* Taille réduite */
+  margin: 3px; /* Espacement réduit */
+  font-size: 0.85em; /* Texte légèrement plus petit */
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+/* Effet au survol */
+.small-button:hover {
+  background-color: #00cc00;
+  box-shadow: 0 0 8px #00ff00;
+}
+
+/* Forms */
+.form-container {
+  background: rgba(17, 17, 17, 0.95); /* Fond sombre semi-transparent */
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #00ff00; /* Bordure néon verte */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Effet néon */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  z-index: 100;
+  position: relative;
+  margin: 20px auto;
+}
+.form-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0px;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  background-color: #222;
+  color: #00ff00;
+  font-size: 1em;
+  
+}
+.form-container input:focus {
+  border-color: #00cc00;
+  outline: none;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* Messages */
+.message {
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.success-message {
+  color: #00ff00;
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 1px solid #00ff00;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-shadow: 0 0 5px #00ff00;
+  margin: 10px 0;
+}
+
+.error-message {
+  color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+  border: 1px solid #ff4444;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-shadow: 0 0 5px #ff4444;
+  margin: 10px 0;
+}
